@@ -9,13 +9,13 @@ def parse_cookbook(file_path):
 
     for line in lines:
         line = line.strip()
-        if line.isdigit():  # Число ингредиентов
+        if line.isdigit(): 
             ingredient_count = int(line)
-        elif line and not line.isdigit():  # Название рецепта или ингредиента
-            if current_recipe is None:  # Начало нового рецепта
+        elif line and not line.isdigit(): 
+            if current_recipe is None: 
                 current_recipe = line
                 cook_book[current_recipe] = []
-            else:  # Новый ингредиент
+            else: 
                 parts = line.split('|')
                 ingredient_name = parts[0].strip()
                 quantity = int(parts[1].strip())
@@ -40,7 +40,6 @@ def get_shop_list_by_dishes(dishes, person_count):
         for ingredient in cook_book[dish]:
             ingredient_name = ingredient['ingredient_name']
             
-            # Проверяем, есть ли ингредиент уже в списке покупок
             if ingredient_name in shop_list:
                 shop_list[ingredient_name]['quantity'] += ingredient['quantity'] * person_count
             else:
