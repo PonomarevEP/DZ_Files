@@ -16,9 +16,7 @@ def write_text(list_text, text_to_write):
 
 def write_to_file(text_to_write, file_name):
     with open(file_name, 'w', encoding='utf-8') as file:
-        
         file.write(text_to_write)
-        file.close()
     print(f'Текст записан в файл {file_name}')
 
 with open(file_path1, 'r', encoding='utf-8') as file1, open(file_path2, 'r', encoding='utf-8') as file2, open(file_path3, 'r', encoding='utf-8') as file3:
@@ -42,9 +40,5 @@ with open(file_path1, 'r', encoding='utf-8') as file1, open(file_path2, 'r', enc
             text_to_write = write_text(list_text2, text_to_write)
         elif i == list_text3[1]:
             text_to_write = write_text(list_text3, text_to_write)
-
-    file1.close()            
-    file2.close()
-    file3.close()
 
     write_to_file(text_to_write, file_name)
