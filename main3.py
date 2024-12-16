@@ -1,4 +1,3 @@
-import os
 from pathlib import Path
 
 input_dir = 'sorted/'

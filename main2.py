@@ -1,5 +1,3 @@
-from pathlib import Path
-
 file_path1 = 'sorted/1.txt'
 file_path2 = 'sorted/2.txt'
 file_path3 = 'sorted/3.txt'
