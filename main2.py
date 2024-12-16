@@ -1,7 +1,9 @@
+from pathlib import Path
+
 file_path1 = 'sorted/1.txt'
 file_path2 = 'sorted/2.txt'
 file_path3 = 'sorted/3.txt'
-file_name  = 'sorted/4.txt'
+file_name  = 'result/4.txt'
 
 def write_text(list_text, text_to_write):
     for k in range(list_text[1]):
